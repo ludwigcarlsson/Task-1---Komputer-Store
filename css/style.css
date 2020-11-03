@@ -1,0 +1,100 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: sans-serif; 
+}
+
+#nav-bar {
+    text-align: center;
+    margin: 0 auto;
+    width: 98%;
+    border-bottom: 2px solid #ddd;
+}
+
+/*CONTAINER*/
+.container {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 15px;
+    justify-content: center;
+}
+
+.item {
+    width: 175px;
+    background-color: #eee;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.laptop-info {
+    width: 650px;
+    margin: 20px auto 0 auto;
+    padding: 15px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: none;
+    grid-template-columns: auto 50% 30%;
+    column-gap: 10px;
+}
+
+/*BUTTONS*/
+.btn {
+    border: none;
+    border-radius: 3px;
+    margin-top: 30px;
+    padding: 8px;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 0px rgba(0, 0, 0, 0.2);
+    transition: box-shadow .5s;
+}
+.btn:hover {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2), inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.work-btns {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+}
+.loan-btn {
+    background-color: mediumspringgreen;
+}
+.bank-btn {
+    background-color: yellow;
+}
+.work-btn {
+    background-color: cornflowerblue;
+    color: white;
+}
+.buy-btn {
+    background-color: darkcyan;
+    font-weight: bold;
+} 
+
+/*MISC*/
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+#laptops-dropdown {
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    padding: 5px;
+}
+.feature-row {
+    font-size: 12px; 
+    margin: 0;
+}
+#image {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#title {
+    font-size: 20px;
+    font-weight: bold;
+}
+#price-tag {
+    text-align: center;
+}

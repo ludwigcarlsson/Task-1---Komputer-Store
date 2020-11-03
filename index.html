@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="getInfo()">
+
+<div id="nav-bar"><h1>Komputer Store</h1></div>
+
+<div class="container" id="container">
+    <div class="item" id="bank">
+        <h3 id="name"></h3>
+        <p class="details"><span>Balance</span><span><span id="balance"></span> kr</span></p>
+        <button class="loan-btn btn" id="loan-btn">Get a loan</button>
+    </div>
+    <div class="item" id="work">
+        <h3>Work</h3>
+        <p class="details"><span>Pay</span> <span><span id="earnings"></span> kr</span></p>
+        <div class="details work-btns">
+            <button class="btn bank-btn" id="bank-btn">Bank</button>
+            <button class="btn work-btn" id="work-btn">Work</button>
+        </div>
+    </div>
+    <div class="item" id="laptops">
+        <h3>Laptops</h3>
+        <select name="Laptops" id="laptops-dropdown" onchange="getLaptopInfo(this.value)">
+            <option value="undefined">Choose a laptop</option>
+        </select>
+        <p style="font-weight: bold; margin-bottom: 0; display: none;" id="feature-title">Features:</p>
+        <div id="features"></div>
+    </div>
+</div>
+
+<div class="laptop-info" id="laptop-info">
+    <div class="image" id="image"></div>
+    <div class="about" id="about">
+        <span id="title"></span>
+        <p id="content"></p>
+    </div>
+    <div class="price" id="price">
+        <h3 id="price-tag"></h3>
+        <button class="btn buy-btn" id="buy-btn"></button>
+    </div>
+</div>
+
+<script src="resources/data.json"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

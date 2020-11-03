@@ -1,0 +1,44 @@
+{
+  "people": [
+    {
+        "name": "Joe Banker",
+        "balance": 200,
+        "laptops": []
+    },
+    {
+        "name": "Mary Banker",
+        "balance": 100,
+        "laptops": []
+    }
+  ],
+  "laptops": [
+    {
+      "id": 0,
+      "name": "Intol Celeroon E10",
+      "price": 1500,
+      "features": ["It has a screen", "There's a keyboard"],
+      "information": "This laptop will turn on! It is perfect for the first time user who likes to have a computer around!"
+    },
+    {
+      "id": 1,
+      "name": "Intol Celeroon E9",
+      "price": 1300,
+      "features": ["It has a screen", "There's a keyboard"],
+      "information": "This laptop will turn on! It is perfect for the first time user who likes to have a computer around!"
+    },
+    {
+      "id": 2,
+      "name": "Intol Celeroon E8",
+      "price": 1100,
+      "features": ["It has a screen", "There's a keyboard"],
+      "information": "This laptop will turn on! It is perfect for the first time user who likes to have a computer around!"
+    },
+    {
+      "id": 3,
+      "name": "Intol Celeroon E7",
+      "price": 900,
+      "features": ["It has a screen", "There's a keyboard"],
+      "information": "This laptop will turn on! It is perfect for the first time user who likes to have a computer around!"
+    }
+  ] 
+}
