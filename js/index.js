@@ -3,16 +3,18 @@ document.getElementById("bank-btn").addEventListener("click", bank)
 document.getElementById("work-btn").addEventListener("click", work)
 document.getElementById("buy-btn").addEventListener("click", buy)
 const balanceField = document.getElementById("balance")
+const laptopField = document.getElementById("laptops-owned")
 const nameField = document.getElementById("name")
 const earningField = document.getElementById("earnings")
 const laptopDropdown = document.getElementById("laptops-dropdown")
 
 let balance
+let laptopsOwned = 0
 let name
 let earnings = 0
 let loanAmnt = 0
 let price
-let boughtLaptops
+let boughtLaptops = []
 
 function getInfo() {
     fetch("./resources/data.json")
@@ -24,6 +26,7 @@ function getInfo() {
             nameField.innerHTML = name
             balanceField.innerHTML = balance
             earningField.innerHTML = earnings
+            laptopField.innerHTML = laptopsOwned
 
             data.laptops.forEach(laptop => {
                 laptopDropdown.innerHTML += `
@@ -35,8 +38,15 @@ function getInfo() {
 
 function getLaptopInfo(laptop) {
     document.getElementById("features").innerHTML = ""
-    document.getElementById("buy-btn").textContent = "BUY NOW"
-    document.getElementById("buy-btn").disabled = false
+    
+    if (!boughtLaptops.includes(laptop)) {
+        document.getElementById("buy-btn").textContent = "BUY NOW"
+        document.getElementById("buy-btn").disabled = false
+    } else {
+        document.getElementById("buy-btn").textContent = "BOUGHT"
+        document.getElementById("buy-btn").disabled = true
+    }
+    
     if (laptop != "undefined") {
         document.getElementById("laptop-info").style.display = "grid"
         fetch("./resources/data.json")
@@ -44,6 +54,7 @@ function getLaptopInfo(laptop) {
         .then(data=> {
             price = data.laptops[laptop].price
 
+            document.getElementById("image").innerHTML = `<img src="${data.laptops[laptop].image}" alt="komputer" width="140px" height="140px" style="border-radius: 20px;">`
             document.getElementById("title").innerHTML = data.laptops[laptop].name
             document.getElementById("content").innerHTML = data.laptops[laptop].information
             document.getElementById("price-tag").innerHTML = price+" kr"
@@ -88,12 +99,14 @@ function work() {
 }
 
 function buy() {
-    console.log();
     if (balance >= price) {
        document.getElementById("buy-btn").textContent = "BOUGHT"
        document.getElementById("buy-btn").disabled = true
        balance = parseInt(balance)-parseInt(price)
        balanceField.innerHTML = balance
+       boughtLaptops.push(document.getElementById("laptops-dropdown").value)
+       laptopsOwned++
+       laptopField.innerHTML = laptopsOwned
        alert("Congrats! You just bought a new laptop!")
     } else {
         alert("You do not have enough money to buy this. \n Take a loan or work for some money")

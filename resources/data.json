@@ -2,18 +2,17 @@
   "people": [
     {
         "name": "Joe Banker",
-        "balance": 200,
-        "laptops": []
+        "balance": 0
     },
     {
         "name": "Mary Banker",
-        "balance": 100,
-        "laptops": []
+        "balance": 0
     }
   ],
   "laptops": [
     {
       "id": 0,
+      "image": "/resources/komputerE10.PNG",
       "name": "Intol Celeroon E10",
       "price": 1500,
       "features": ["It has a screen", "There's a keyboard"],
@@ -21,6 +20,7 @@
     },
     {
       "id": 1,
+      "image": "/resources/komputerE9.PNG",
       "name": "Intol Celeroon E9",
       "price": 1300,
       "features": ["It has a screen", "There's a trackpad"],
@@ -28,6 +28,7 @@
     },
     {
       "id": 2,
+      "image": "/resources/komputerE8.PNG",
       "name": "Intol Celeroon E8",
       "price": 1100,
       "features": ["There's a trackpad", "There's a keyboard"],
@@ -35,6 +36,7 @@
     },
     {
       "id": 3,
+      "image": "/resources/komputerE7.PNG",
       "name": "Intol Celeroon E7",
       "price": 900,
       "features": ["No features"],

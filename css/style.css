@@ -34,7 +34,7 @@ body {
     background-color: #eee;
     border-radius: 15px;
     display: none;
-    grid-template-columns: auto 50% 30%;
+    grid-template-columns: auto 50% 23%;
     column-gap: 10px;
 }
 
@@ -55,6 +55,7 @@ body {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 10px;
+    margin-top: 50px;
 }
 .loan-btn {
     background-color: mediumspringgreen;
@@ -88,8 +89,10 @@ body {
     margin: 0;
 }
 #image {
+    background-color: white;
     border: 1px solid black;
     border-radius: 20px;
+    text-align: center;
 }
 #title {
     font-size: 20px;
