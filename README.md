@@ -7,6 +7,7 @@ To run this, I recommend using VS Code with the extension LiveServer.
 Clone the repository, then in VS Code rightclick the code and "Open with Live Server"
 
 ## Liscense
+[MIT](https://mit-license.org/)
 
 ### Author
-Ludwig Carlsson
+[Ludwig Carlsson](https://github.com/ludwigcarlsson)
