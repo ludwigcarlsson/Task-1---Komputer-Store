@@ -76,7 +76,7 @@ function loan() {
         alert("You have already loaned money, work for more money and then buy a laptop")
     } else { 
         let loanAns = prompt("How much money do you want to loan?", "")
-        if (loanAns > balance*2 || loanAns === null) {
+        if (loanAns > balance*2 || loanAns === null || isNaN(loanAns)) {
             alert("This amount cant be accepted, \n MIN: 1 \n MAX: Double your current balance")
         } else {
             loanAmnt = 1
