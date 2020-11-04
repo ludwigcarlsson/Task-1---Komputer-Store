@@ -1,7 +1,7 @@
 # Task-1---Komputer-Store
 A simple clicker-like web application, get money by working, bank money and then spend it on different laptops.
 
-(https://cdn.discordapp.com/attachments/477795777016627200/773549475712335902/unknown.png)[image]
+![image](https://cdn.discordapp.com/attachments/477795777016627200/773549475712335902/unknown.png "homepage")
 
 ## Usage
 To run this, I recommend using VS Code with the extension LiveServer.
